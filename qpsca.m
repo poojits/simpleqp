@@ -1,4 +1,12 @@
 function [x,fval] = qpsca(H,f)
+% simpleqp - Simple Quadratic Programming Solver
+% 			 Implementation of Sequential coordinate-wise algorithm
+% 
+% USAGE:
+% [x,fval]	= qpsca(H,f)
+% 
+% Minimizes the function fval = 0.5*x'*H*x + f*x
+% subject to the constraint x >= 0.
 	delta = 0.001;
 	fval=inf;
 	n = size(f,1);
